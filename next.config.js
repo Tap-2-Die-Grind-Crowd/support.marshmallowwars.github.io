@@ -5,7 +5,8 @@ const nextConfig = {
     images: {
         unoptimized: true
     },
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/support.marshmallowwars.github.io/' : '',
+    basePath: '/support.marshmallowwars.github.io',
+    assetPrefix: '/support.marshmallowwars.github.io/',
 }
 
 module.exports = nextConfig
