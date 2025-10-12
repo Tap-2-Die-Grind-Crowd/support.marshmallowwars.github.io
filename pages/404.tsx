@@ -11,9 +11,6 @@ const Custom404: React.FC = () => {
 
             <div className="error-container">
                 <div className="error-content">
-                    <div className="unicorn-icon">
-                        <img src="/images/unicorn-rainbow.svg" alt="Confused Unicorn" width="150" height="112" />
-                    </div>
                     <h1 className="error-title">404</h1>
                     <h2 className="error-subtitle">Oops! Page Not Found</h2>
                     <p className="error-description">
@@ -46,15 +43,6 @@ const Custom404: React.FC = () => {
           max-width: 500px;
         }
 
-        .unicorn-icon {
-          margin-bottom: 1.5rem;
-          animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
 
         .error-title {
           font-size: 4rem;

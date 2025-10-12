@@ -22,24 +22,20 @@ const Home: React.FC = () => {
             <div className="container">
                 <header className="header">
                     <div className="logo-section">
-                        <div className="unicorn-icon">
-                            <img src="/images/unicorn-rainbow.svg" alt="Magical Unicorn" width="120" height="90" />
-                        </div>
                         <h1 className="title">
                             <span className="rainbow-text">Marshmallow Wars</span>
                         </h1>
-                        <p className="subtitle">Fantasy Unicorn Candy Adventure</p>
                     </div>
                 </header>
 
                 <main className="main-content">
-                    <div className="candy-showcase">
-                        <div className="candy-item">
-                            <img src="/images/candy-gummy-bear.svg" alt="Candy Gummy Bear" width="150" height="150" />
-                        </div>
-                        <div className="candy-item">
-                            <img src="/images/candy-collection.svg" alt="Colorful Candies" width="180" height="120" />
-                        </div>
+                    <div className="game-description">
+                        <h2>Enter the Magical Candy Kingdom!</h2>
+                        <p>
+                            Join Princess Marshmallow and her rainbow unicorn friends in an epic battle
+                            against the sour candy monsters. Collect magical sweets, cast rainbow spells,
+                            and restore sweetness to the Candy Kingdom!
+                        </p>
                     </div>
 
                     <div className="action-buttons">
@@ -71,14 +67,6 @@ const Home: React.FC = () => {
                         </button>
                     </div>
 
-                    <div className="game-description">
-                        <h2>Enter the Magical Candy Kingdom!</h2>
-                        <p>
-                            Join Princess Marshmallow and her rainbow unicorn friends in an epic battle
-                            against the sour candy monsters. Collect magical sweets, cast rainbow spells,
-                            and restore sweetness to the Candy Kingdom!
-                        </p>
-                    </div>
                 </main>
 
                 <footer className="footer">
@@ -89,10 +77,31 @@ const Home: React.FC = () => {
             <style jsx>{`
         .container {
           min-height: 100vh;
-          background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+          background-image: url('/images/unicorn-rainbow-bg.webp');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
           display: flex;
           flex-direction: column;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          position: relative;
+        }
+
+        .container::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(255, 255, 255, 0.3);
+          z-index: 1;
+        }
+
+        .container > * {
+          position: relative;
+          z-index: 2;
         }
 
         .header {
@@ -105,15 +114,6 @@ const Home: React.FC = () => {
           flex-direction: column;
           align-items: center;
           gap: 1rem;
-        }
-
-        .unicorn-icon {
-          animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
         }
 
         .title {
@@ -153,21 +153,6 @@ const Home: React.FC = () => {
           gap: 2rem;
         }
 
-        .candy-showcase {
-          display: flex;
-          justify-content: center;
-          gap: 2rem;
-          flex-wrap: wrap;
-          margin: 1rem 0;
-        }
-
-        .candy-item {
-          transition: transform 0.3s ease;
-        }
-
-        .candy-item:hover {
-          transform: scale(1.05);
-        }
 
         .action-buttons {
           display: flex;
@@ -245,6 +230,7 @@ const Home: React.FC = () => {
           border-radius: 20px;
           backdrop-filter: blur(10px);
           box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+          margin-bottom: 2rem;
         }
 
         .game-description h2 {
@@ -272,14 +258,6 @@ const Home: React.FC = () => {
             font-size: 2rem;
           }
           
-          .candy-showcase {
-            gap: 1rem;
-          }
-          
-          .candy-item img {
-            max-width: 120px;
-            height: auto;
-          }
           
           .main-content {
             padding: 1rem;
