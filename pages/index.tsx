@@ -77,7 +77,7 @@ const Home: React.FC = () => {
             <style jsx>{`
         .container {
           min-height: 100vh;
-          background-image: url('/images/unicorn-rainbow-bg.webp');
+          background-image: url('/support.marshmallowwars.github.io/images/unicorn-rainbow-bg.webp');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
