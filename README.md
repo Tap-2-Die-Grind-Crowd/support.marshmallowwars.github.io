@@ -32,10 +32,9 @@ npm run dev
 
 ```bash
 npm run build
-npm run export
 ```
 
-This will create a static export in the `out` directory ready for GitHub Pages deployment.
+This will create a static export in the `out` directory ready for GitHub Pages deployment (configured in `next.config.js`).
 
 ## Customization
 
