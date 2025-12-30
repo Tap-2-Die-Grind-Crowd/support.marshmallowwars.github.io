@@ -1,6 +1,7 @@
 # Marshmallow Wars Support Page
 
-A magical Next.js support page for the Marshmallow Wars iOS mobile app featuring fantasy unicorn candy themes.
+A magical Next.js support page for the Marshmallow Wars iOS mobile app featuring fantasy unicorn candy themes. Actual URL for [Marshmallow Wars support site](https://tap-2-die-grind-crowd.github.io/support.marshmallowwars.github.io/)
+
 
 ## Features
 
